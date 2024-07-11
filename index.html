@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title> . . . . . quotebook .</title>
+	<meta charset="UTF-8">
+	
+	<link rel="icon" href="other/pixel-star-icon-27.ico">
+	<link rel="stylesheet" href="https://unpkg.com/fixedsys-css/css/fixedsys.css">
+	<link href="styles.css" rel="stylesheet">
+
+	<style type="text/css">
+		body {
+			background-color: #ffffff;
+			color: #4F4F4F;
+			font-family: 'Ubuntu Mono', courier new;
+			font-size: 12pt;
+		}
+
+		b {color: #7D9EC0;}
+
+		u {color: #BDA0CB;}
+
+		a {color: #B272A6; text-decoration: none;}
+
+		a:hover {color: #ffffff;}
+	</style>
+	
+	<script>
+		var space = " ";
+		var speed = "100";
+		var pos = 0;
+		var msg = "quotebook 	 . . . . . .";
+		function Scroll() {
+			document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
+			pos++;
+			if (pos > msg.length) pos = 0;
+			window.setTimeout("Scroll()", speed);
+		}
+		Scroll();
+	</script>
+
+	<script>
+		const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF3380'];
+		let currentIndex = 0;
+
+		function changeColor() {
+			const elements = document.querySelectorAll('.oldfont');
+			elements.forEach(element => {
+				element.style.color = colors[currentIndex];
+			});
+			currentIndex = (currentIndex + 1) % colors.length;
+		}
+
+		setInterval(changeColor, 1000);
+
+		changeColor();
+	</script>
+
+	<script src="quotes.js"></script>
+
+</head>
+
+<body background="gifs/background.gif">
+	<center>
+		<br><br><br>
+		<img src="gifs/div2.gif">
+		<br><br><br>
+		<a class="1" href=""><img src="gifs/earth0.gif" title="click to enter"><br></a>
+		<a class="1" href=""><img src="images/wt.png"></a> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		<a class="1" href=""><img src="images/tq.png" height="90"></a>
+		<br><br>
+		<img src="gifs/div2.gif">
+		<br><br><br>
+		<img src="gifs/neonopen.gif" height="30">
+		<br><br>
+	</center>
+
+	<center>
+		<h1 class="oldfont" id="q1">Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote...</h1>
+		<h2 class="oldfont" id="n1">-- Name...</h2>
+	</center>
+
+
+	<div class="bottom">
+		<center>
+			<a>
+				<img src="images/left.png">
+				
+				<button onclick="processCsv()" class="btn">
+					<img src="images/right.png">
+				</button>
+			</a>
+			<br><br>
+			<img src="images/byroy.png" width="150" height="auto">
+		</center>
+	</div>
+
+
+
+
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		const firebaseConfig = {
+		  apiKey: "AIzaSyAYK0dQ5bh3FpJWDJ5HBalwhfEuWUD1INE",
+		  authDomain: "dada-4e860.firebaseapp.com",
+		  projectId: "dada-4e860",
+		  storageBucket: "dada-4e860.appspot.com",
+		  messagingSenderId: "92396566554",
+		  appId: "1:92396566554:web:3bbc3d9544f27b5a38b9a3"
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+	  </script>
+
+</body>
+</html>
